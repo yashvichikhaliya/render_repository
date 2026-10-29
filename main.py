@@ -25,8 +25,14 @@ def get_users():
 
 @app.get("/img", response_class=HTMLResponse)
 def get_img():
-    return"""
+    return f"""
 
     <h1>Image</h1>
     <img src={images} alt="sunflo0we"/>
     """
+
+@app.get("/contact")
+def get_contact():
+    return{
+        "Message":"Hello from FastAPI on Render.."
+    }
